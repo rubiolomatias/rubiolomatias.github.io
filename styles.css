@@ -250,14 +250,6 @@ footer{
   justify-content: flex-end;
   align-items: center;
 }
-footer .info{
-  width: 90%;
-}
-footer p{
-  text-align: center;
-  font-size: 1.2em;
-  margin-left: 65%;
-}
 
 
 
@@ -502,10 +494,6 @@ footer p{
   .social{
     flex-direction: column;
     font-size: 1em;
-  }
-
-  footer p{
-    margin-left: 0%;
   }
 
 
