@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lily+Script+One&family=Righteous&display=swap');*{
+    padding:0;
+    margin:0 auto;
+}
+body{
+  font-family: 'Righteous', cursive;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+nav {
+  font-family: 'Lily Script One', cursive;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2A9D8F;
+  transition: 0.3s;
+}
+nav p{
+  margin: 0 3%;
+  color: #fff;
+  font-size: 2em;
+}
+nav span{
+  color: #f4a261;
+}
+nav.scrolled-down {
+  height: 80px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+}
+nav.scrolled-down img {
+  scale: 1.25;
+}
+.links a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #f4a261;
+  transform: scale(0,1);
+  transform-origin: center;
+  transition: transform .25s;
+}
+.links a:hover::after {
+  transform: scale(1,1);
+}
+.links a:hover{
+  color:#f4a261;
+}
+.links a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.5em;
+}
+.links {
+  display: flex;
+  gap:30px;
+  margin: 0 3%;
+}
+.container {
+  width: 100%;
+}
+
+#home{
+  width:100vw;
+  height: 100vh;
+  background-color: #264653;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+h1,h2{
+  font-family: 'Berkshire Swash', cursive;
+  color: #fff;
+  font-size: 3em;
+}
+h1{
+  font-size: 3.5em;
+}
+#home p{
+  color: #f4a261;
+  font-size: 1.8em;
+}
+
+#about{
+  width:100vw;
+  height:100vh;
+  background-color: #f4a261;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  align-items: center;
+}
+#about img{
+  padding-left: 1em;
+  margin-top: 80px;
+  width: 90%;
+  grid-column: 1/5;
+}
+#about .info{
+  grid-column: 5/10;
+  padding: 3em;
+}
+#about .info .line{
+  height: 4px;
+  width: 80px;
+  margin-top: 5px;
+  margin-bottom: 2em;
+  background-color: #2A9D8F;
+  margin-left: 0;
+}
+#about .info p{
+  text-align: justify;
+  color: #fff;
+}
+#about .info #lastp{
+  margin-bottom: 20px;
+}
+#about button{
+  padding: 10px 20px;
+  background-color: #2A9D8F;
+  font-size: 1em;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#about button a{
+  text-decoration: none;
+  color: #fff;
+}
+#about button:hover{
+  background-color: #264653;
+}
+
+#work{
+  background-color: #264653;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+.grid{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+.project{
+  width: 400px;
+  height: 300px;
+  margin-top:40px;
+}
+.last{
+  padding-bottom: 40px;
+}
+.project img{
+  width: 100%;
+  height: 280px;
+}
+.project a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.project p{
+  color: #f4a261;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 60px;
+  visibility: hidden;
+}
+.project i{
+  color: #f4a261;
+  font-size: 9em;
+  margin-top: -200px;
+  visibility: hidden;
+}
+.project span{
+  color: #2A9D8F;
+  visibility:hidden;
+}
+.project:hover i {
+  visibility: visible;
+  color: #f4a261;
+}
+.ux{
+  background-color: rgba(49, 196, 179, 0.7);
+}
+.ux p{
+  margin-top: 20px;
+  font-size: 2em;
+}
+.ux:hover{
+  background-color: rgba(42, 157, 143, 1);
+}
+.project:hover p {
+  visibility: visible;
+  color: #f4a261;
+}
+.project:hover span{
+  visibility:visible;
+}
+
+#contact{
+  width: 100vw;
+  height: 80vh;
+  background-color: #f4a261;
+  color: #fff;
+  text-align: center;
+}
+#contact h1{
+  padding-top:10%;
+}
+#contact p{
+  font-size: 1.8em;
+  color: #264653;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.5em;
+  margin-top: 4rem;
+}
+#profile-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+#profile-link:hover {
+  transform: translateY(8px);
+  color: #264653;
+}
+
+footer{
+  border-top: 6px solid #264653;
+  background-color:#f4a261;
+  color: #264653;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .info{
+  width: 90%;
+}
+footer p{
+  text-align: center;
+  font-size: 1.2em;
+  margin-left: 65%;
+}
+
+
+
+/*Project Ux*/
+.description{
+  margin-top: 100px;
+  text-align: center;
+}
+.description h1{
+  color: #f4a261;
+}
+.description p{
+  font-size: 1em;
+}
+
+.content{
+  margin-top: 20px;
+  width: 960px;
+  height: auto;
+  border: 3em solid #0db0ba;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .images{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content #preview{
+  width: 600px;
+  height: 500px;
+}
+.content #logo{
+  width: 300px;
+  height: 200px;
+}
+.divider{
+  margin: 3% 0;
+  height: .5em;
+  width: 80%;
+  background-color: #6766a3;
+  margin-left: 10%;
+}
+.content h2{
+  font-size: 4em;
+  margin-bottom: .5em;
+  color: #000;
+}
+.content h3{
+  margin-bottom: 1em;
+  width:80%;
+  font-size: 2em;
+  text-align: justify;
+}
+.content #logodesign{
+  width: 80%;
+}
+.content #userpersonas{
+  width: 90%;
+  margin-bottom: 1em;
+}
+.content #userflow{
+  width: 90%;
+}
+.content #wireframes{
+  width: 90%;
+}
+
+.go-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  padding: 1em;
+  display: none;
+}
+
+.go-top:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+@media handheld,screen and  (max-width: 599px){
+  nav {
+    height: 50px;
+  }
+  nav p{
+    font-size: 1.5em;
+  }
+  nav.scrolled-down {
+    height: 70px;
+  }
+  .links a{
+      font-size: 1.2em;
+  }
+  .links {
+    gap:15px;
+  }
+  
+  h1,h2{
+    font-size: 2em;
+  }
+  h1{
+    font-size: 2em;
+  }
+  #home p{
+    font-size: 1.5em;
+  }
+  
+  #about{
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  #about img{
+    visibility: hidden;
+  }
+  #about .info .line{
+    width: 100px;
+    margin-left: 30%;
+  }
+
+  .grid{
+    padding: 0px 0;
+    flex-direction: column;
+  }
+  .last{
+    padding-bottom: 60px;
+  }
+  .project{
+    width: 300px;
+    height: 300px;
+    margin-top:40px;
+  }
+  .project p{
+    visibility: visible;
+  }
+  .project span{
+    visibility:visible;
+  }
+  
+  #contact{
+    height: 80vh;
+  }
+  #contact h1{
+    padding-top:15%;
+  }
+  #contact p{
+    font-size: 1.5em;
+  }
+  .social{
+    flex-direction: column;
+  }
+  #profile-link {
+    font-size: 1.5rem;
+  }
+  
+  footer{
+    height: 10vh;
+  }
+  footer p{
+    font-size: 1em;
+    margin-left: 0%;
+  }
+  
+  /*Project Ux*/
+  .description{
+    margin-top: 60px;
+  }
+  
+  .content{
+    margin-top: 20px;
+    width: 90%;
+    border: 1em solid #0db0ba;
+    margin-bottom: 20px;
+  }
+  .content .images{
+    flex-direction: column;
+  }
+  .content #preview{
+    width: 90%;
+    height: 200px;
+  }
+  .content #logo{
+    width: 50%;
+    height: 100px;
+  }
+  .divider{
+    margin-left: 0%;
+  }
+  .content h2{
+    font-size: 1.5em;
+  }
+  .content h3{
+    font-size: .8em;
+  }
+  .content #paleta{
+    width:80%;
+  }
+}
+
+@media handheld,screen and  (min-width: 600px) and (max-width: 1023px){
+
+  #about{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #about img{
+    visibility: hidden;
+  }
+  #about .info{
+    grid-column: 5/10;
+    padding: 0;
+  }
+  #about .info .line{
+    width: 150px;
+    margin-left: 40%;
+  }
+  #about .info p{
+    text-align: justify;
+    width:80%;
+  }
+
+  .grid{
+    flex-direction: column;
+  }
+  .project p{
+    visibility: visible;
+  }
+  .project span{
+    visibility:visible;
+  }
+  .ux{
+    background-color: rgba(49, 196, 179, 0.7);
+  }
+
+  .social{
+    flex-direction: column;
+    font-size: 1em;
+  }
+
+  footer p{
+    margin-left: 0%;
+  }
+
+
+
+  /*Project Ux*/
+  .description{
+    margin-top: 70px;
+  }
+
+  .content{
+    width: 90%;
+    border: 1.5em solid #0db0ba;
+    margin-bottom: 30px;
+  }
+  .content #preview{
+    width: 350px;
+    height: 250px;
+  }
+  .content #logo{
+    width: 150px;
+    height: 100px;
+  }
+  .divider{
+    margin-left: 0%;
+  }
+  .content h2{
+    font-size: 2em;
+  }
+  .content h3{
+    font-size: 1em;
+  }
+}
